@@ -1,6 +1,6 @@
 #Cut audio file using ffmpeg
 . OpenFileScript.ps1
-$filePath = Open-File $env:USERPROFILE
+$filePath = Open-File .
 $file_extension = [System.IO.Path]::GetExtension($filePath)
 $file_name = [System.IO.Path]::GetFileNameWithoutExtension($filePath)
 $new_file_name = "$file_name"+"_cut"+"$file_extension"

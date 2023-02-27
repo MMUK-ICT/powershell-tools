@@ -1,3 +1,6 @@
+
+# This function opens a GUI File Picker when running a powershell Script so that I don't have to specify
+# a fully qualified path for files
 function Open-File([string] $initialDirectory){
 
     [System.Reflection.Assembly]::LoadWithPartialName("System.windows.forms") | Out-Null
