@@ -2,7 +2,7 @@ $folderPath = "C:\Users\BRUCE\Documents\diaken stuff\statements\printouts\"
 $logFilePath = "C:\Users\BRUCE\Documents\diaken stuff\statements\print-log.txt"
 
 # Get all files in the folder
-$files = Get-ChildItem -Path $folderPath -File
+$files = Get-ChildItem -Path $folderPath -File | Sort-Object -Property LastWriteTime
 
 # Loop through each file and print it
 foreach ($file in $files) {
