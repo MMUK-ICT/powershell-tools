@@ -1,5 +1,5 @@
 $folderPath = "C:\Users\BRUCE\Documents\diaken stuff\statements\printouts\"
-$logFilePath = "C:\Users\BRUCE\Documents\diaken stuff\statements\print-log.txt"
+# $logFilePath = "C:\Users\BRUCE\Documents\diaken stuff\statements\print-log.txt"
 
 # Get all files in the folder
 $files = Get-ChildItem -Path $folderPath -File | Sort-Object -Property LastWriteTime
@@ -16,7 +16,7 @@ foreach ($file in $files) {
     Add-Content -Path $logFilePath -Value "Printed: $fileName"
 }
 
-$delConfirm = Read-Host -Prompt "Did they print successfully? (y/n)" 
+$delConfirm = (Read-Host -Prompt "Did they print successfully? (y/n)").Trim()
 if("y" -ieq $delConfirm){
     foreach($file in $files){
         $fileName = $file.FullName
@@ -24,6 +24,7 @@ if("y" -ieq $delConfirm){
         Remove-Item -Path $fileName -Force
     }
 }
+
 else {
     "Sorry!"
     Exit
