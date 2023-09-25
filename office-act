@@ -1,10 +1,10 @@
 $welcomeText=@"
------------------------------------------------
-    Welcome to Multimedia University of Kenya
-                Activation CLI Server
+----------------------------------------------------------
+        Welcome to Multimedia University of Kenya
+                   Microsoft Licensing Server
 
-            Please Log in to continue
------------------------------------------------
+                   Please Log in to continue
+----------------------------------------------------------
 "@
 Write-Host $welcomeText
 
